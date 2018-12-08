@@ -1,0 +1,11 @@
+
+- name: Add an Apt signing key, uses whichever key is at the URL
+  apt_key:
+    url: http://deb.playonlinux.com/public.gpg
+    state: "{{ packages_state }}"
+
+# Add specified repository into sources list using specified filename.
+- apt_repository:
+    repo: 'deb http://deb.playonlinux.com/ {{ distribution_codename }} main'
+    state: "{{ packages_state }}"
+    filename: playonlinux

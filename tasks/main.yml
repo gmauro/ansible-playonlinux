@@ -1,0 +1,46 @@
+# see https://www.debian.org/releases/ or http://releases.ubuntu.com/
+
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: jessie
+  when:
+    - ansible_distribution == 'Debian'
+    - ansible_distribution_version == 8
+    -
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: stretch
+  when:
+    - ansible_distribution == 'Debian'
+    - ansible_distribution_version == 9
+
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: trusty
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == "14.04"
+
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: xenial
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == "16.04"
+
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: bionic
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == "18.04"
+
+- include_tasks: add_apt_repo.yml
+  vars:
+    distribution_codename: cosmic
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version == "18.10"
+
+- include: install_packages.yml
+  when: install_packages

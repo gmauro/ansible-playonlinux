@@ -1,0 +1,11 @@
+- name: Update apt cache
+  apt:
+    update_cache: "{{ update_cache }}"
+
+- name: install packages
+  apt:
+    name: "{{ packages }}"
+    state: "{{ packages_state }}"
+  vars:
+    packages:
+    - playonlinux

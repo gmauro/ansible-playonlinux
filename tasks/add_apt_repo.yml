@@ -6,7 +6,7 @@
 
 # Add specified repository into sources list using specified filename.
 - name: Add repository
-- apt_repository:
+  apt_repository:
     repo: 'deb http://deb.playonlinux.com/ {{ distribution_codename }} main'
     state: "{{ packages_state }}"
     filename: playonlinux

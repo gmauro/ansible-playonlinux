@@ -1,4 +1,5 @@
-# Ansible Docker [![Build Status](https://travis-ci.org/gmauro/ansible-playonlinux.svg?branch=master)](https://travis-ci.org/gmauro/ansible-playonlinux)
+# Ansible PlayOnLinux  
+[![Build Status](https://travis-ci.org/gmauro/ansible-playonlinux.svg?branch=master)](https://travis-ci.org/gmauro/ansible-playonlinux)  
 [Ansible](https://wwww.ansible.com) role to install [PlayOnLinux](http://www.playonlinux.com) on Ubuntu or Debian systems .  
 
 
